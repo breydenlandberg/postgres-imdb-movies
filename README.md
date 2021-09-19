@@ -5,7 +5,7 @@ Data sourced from: https://www.kaggle.com/trentpark/imdb-data
 A web application was to be built around the data linked above. It would manipulate the data in various ways; display it, filter it, find from it. Therefore, this PostgreSQL database was constructed to facilitate this. PostgreSQL was chosen because it is a robust, powerful RDBMS.
 
 The web application built around this can be found at: {website}\
-It is deployed on Heroku and built using Play Framework (Scala).
+It is deployed on Heroku and built using {?}.
 
 ## Description
 The database will have been cleaned and normalised to 3NF. The original datasets were reasonably 
@@ -32,6 +32,8 @@ Creating the database is easy, simply:
 Demonstrated below:
 
 ### Local
+**ASSUMING A DATABASE NAMED `postgres-imdb-movies`**
+
 In the folder containing the production_[1|2].sql files, build the tables to copy the data into:
 ```bash
 psql -h localhost -U postgres -d postgres-imdb-movies -a -f production_1.sql
@@ -138,7 +140,7 @@ Exit postgres psql:
 \
 Insert data, modify and normalise tables (again, in the folder containing the production_[1|2].sql files):
 ```bash
-heroku pg:psql --app imdb-movies-play < production_2.sql
+heroku pg:psql --app app-name < production_2.sql
 ```
 This may take quite a while.
 
