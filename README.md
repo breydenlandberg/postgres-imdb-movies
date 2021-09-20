@@ -23,6 +23,10 @@ In the normalisation process, this database ultimately looks like the following 
 - principal_characters in 1NF `FK(movie_id, name_order_index, name_id) in imdb_principals`
 
 ## Usage
+**Assumptions:**
+- PostgreSQL is set up and running on the environment in question.
+- Database name is `postgres-imdb-movies`
+
 Creating the database is easy, simply:
 
 1. Run production_1.sql
@@ -32,8 +36,6 @@ Creating the database is easy, simply:
 Demonstrated below:
 
 ### Local
-**ASSUMING A DATABASE NAMED `postgres-imdb-movies`**
-
 In the folder containing the production_[1|2].sql files, build the tables to copy the data into:
 ```bash
 psql -h localhost -U postgres -d postgres-imdb-movies -a -f production_1.sql
